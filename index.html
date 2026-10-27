@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WawhbyFlora Sacs - Boutique de sacs à main.">
+    <title>WawhbyFlora Sacs</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>WawhbyFlora Sacs</h1>
+            <p>Des sacs élégants pour chaque occasion.</p>
+        </div>
+
+        <nav aria-label="Navigation principale">
+            <button type="button" disabled>
+                🛒 Panier
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="accueil" aria-labelledby="titre-accueil">
+            <h2 id="titre-accueil">Bienvenue chez WawhbyFlora Sacs</h2>
+            <p>
+                Découvrez notre sélection de sacs à main et choisissez
+                vos modèles préférés.
+            </p>
+        </section>
+
+        <section id="catalogue" aria-labelledby="titre-catalogue">
+            <h2 id="titre-catalogue">Nos sacs</h2>
+
+            <div id="grille-produits">
+
+                <!-- Carte produit temporaire -->
+                <article class="carte-produit">
+                    <img
+                        src="images/sac-01.jpg"
+                        alt="Sac Classique"
+                    >
+
+                    <div>
+                        <h3>Sac Classique</h3>
+
+                        <p>15 000 FCFA</p>
+
+                        <p>
+                            Un sac élégant et intemporel, idéal pour
+                            accompagner une tenue professionnelle ou décontractée.
+                        </p>
+
+                        <button type="button" disabled>
+                            Voir le produit
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="panier" aria-labelledby="titre-panier">
+            <h2 id="titre-panier">Mon panier</h2>
+
+            <div id="liste-panier">
+                <p>Votre panier est actuellement vide.</p>
+            </div>
+
+            <p>
+                <strong>Total des articles :</strong>
+                <span id="total-panier">0 FCFA</span>
+            </p>
+
+            <p>
+                Livraison non incluse. Elle sera confirmée par la vendeuse.
+            </p>
+
+            <button type="button" disabled>
+                Continuer
+            </button>
+        </section>
+
+        <section id="commande" aria-labelledby="titre-commande">
+            <h2 id="titre-commande">Vos informations</h2>
+
+            <form id="formulaire-commande">
+
+                <div>
+                    <label for="prenom">Prénom</label>
+                    <input
+                        type="text"
+                        id="prenom"
+                        name="prenom"
+                        placeholder="Votre prénom"
+                        autocomplete="given-name"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="commune">Commune</label>
+                    <input
+                        type="text"
+                        id="commune"
+                        name="commune"
+                        placeholder="Votre commune"
+                        autocomplete="address-level2"
+                        required
+                    >
+                </div>
+
+                <button type="submit" disabled>
+                    Voir le récapitulatif
+                </button>
+
+            </form>
+        </section>
+
+        <section id="recapitulatif" aria-labelledby="titre-resume">
+            <h2 id="titre-resume">Récapitulatif de votre demande</h2>
+
+            <div id="resume-commande">
+                <p>
+                    Votre récapitulatif apparaîtra ici.
+                </p>
+            </div>
+
+            <p>
+                <strong>Total des articles :</strong>
+                <span>0 FCFA</span>
+            </p>
+
+            <p>
+                Montant hors livraison. La disponibilité des sacs et
+                les conditions de livraison seront confirmées par la vendeuse.
+            </p>
+
+            <button type="button" disabled>
+                Retour
+            </button>
+
+            <button type="button" disabled>
+                Envoyer sur WhatsApp
+            </button>
+        </section>
+
+        <!-- Fenêtre de détails produit -->
+        <dialog id="fiche-produit" aria-labelledby="titre-fiche-produit">
+
+            <div>
+                <h2 id="titre-fiche-produit">Détails du produit</h2>
+
+                <img
+                    src="images/sac-01.jpg"
+                    alt="Sac Classique"
+                >
+
+                <h3>Sac Classique</h3>
+
+                <p>Sac à main</p>
+
+                <p>15 000 FCFA</p>
+
+                <p>
+                    Un sac élégant et intemporel, idéal pour accompagner
+                    une tenue professionnelle ou décontractée.
+                </p>
+
+                <div>
+                    <label for="quantite-produit">Quantité</label>
+                    <input
+                        type="number"
+                        id="quantite-produit"
+                        name="quantite-produit"
+                        value="1"
+                        min="1"
+                        disabled
+                    >
+                </div>
+
+                <button type="button" disabled>
+                    Ajouter au panier
+                </button>
+
+                <form method="dialog">
+                    <button type="submit">
+                        Fermer
+                    </button>
+                </form>
+            </div>
+
+        </dialog>
+
+    </main>
+
+    <footer>
+        <p><strong>WawhbyFlora Sacs</strong></p>
+
+        <p>Merci pour votre confiance.</p>
+
+        <p>
+            Les disponibilités et la livraison sont confirmées par la vendeuse.
+        </p>
+    </footer>
+
+</body>
+</html>
